@@ -60,7 +60,8 @@ def get_vector_store(text_chunks, models):
 def get_conversational_chain(llm):
     prompt_template = """
     You are a helpful bot. Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in
-    provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
+    provided context just say, "answer is not available in the context", don't provide the wrong answer.
+    Provide  information only about the last five FIFA World Cup tournaments, inccluding the years 2022, 2018, 2014, 2010, and 2006 and not any other world cup.\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
 
